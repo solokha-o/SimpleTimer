@@ -10,12 +10,15 @@
 		DB0493F026089EE700390B9E /* SimpleTimer WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = DB0493EF26089EE700390B9E /* SimpleTimer WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DB0493F626089EE700390B9E /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0493F426089EE700390B9E /* Interface.storyboard */; };
 		DB0493F826089EEA00390B9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB0493F726089EEA00390B9E /* Assets.xcassets */; };
-		DB0493FF26089EEB00390B9E /* SimpleTimer WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DB0493FE26089EEB00390B9E /* SimpleTimer WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DB04940426089EEB00390B9E /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB04940326089EEB00390B9E /* InterfaceController.swift */; };
 		DB04940626089EEB00390B9E /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB04940526089EEB00390B9E /* ExtensionDelegate.swift */; };
 		DB04940826089EEB00390B9E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB04940726089EEB00390B9E /* NotificationController.swift */; };
 		DB04940A26089EEB00390B9E /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB04940926089EEB00390B9E /* ComplicationController.swift */; };
 		DB04940C26089EEC00390B9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB04940B26089EEC00390B9E /* Assets.xcassets */; };
+		DB049498260D06E400390B9E /* TimerDigits.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB049495260D06E400390B9E /* TimerDigits.swift */; };
+		DB049499260D06E400390B9E /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB049496260D06E400390B9E /* TimerModel.swift */; };
+		DB04949A260D06E400390B9E /* TimerDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB049497260D06E400390B9E /* TimerDisplay.swift */; };
+		DB57EDCC260D106800F80186 /* SimpleTimer WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DB0493FE26089EEB00390B9E /* SimpleTimer WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,7 +29,7 @@
 			remoteGlobalIDString = DB0493EE26089EE700390B9E;
 			remoteInfo = "SimpleTimer WatchKit App";
 		};
-		DB04940026089EEB00390B9E /* PBXContainerItemProxy */ = {
+		DB57EDCD260D106800F80186 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DB0493E526089EE600390B9E /* Project object */;
 			proxyType = 1;
@@ -36,17 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		DB04941426089EEC00390B9E /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				DB0493FF26089EEB00390B9E /* SimpleTimer WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DB04941826089EEC00390B9E /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -56,6 +48,27 @@
 				DB0493F026089EE700390B9E /* SimpleTimer WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB3E1839260D0FA00003EB28 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB57EDCF260D106800F80186 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DB57EDCC260D106800F80186 /* SimpleTimer WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -74,6 +87,9 @@
 		DB04940B26089EEC00390B9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB04940D26089EEC00390B9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB04940E26089EEC00390B9E /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		DB049495260D06E400390B9E /* TimerDigits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerDigits.swift; sourceTree = "<group>"; };
+		DB049496260D06E400390B9E /* TimerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
+		DB049497260D06E400390B9E /* TimerDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerDisplay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +109,7 @@
 				DB0493F326089EE700390B9E /* SimpleTimer WatchKit App */,
 				DB04940226089EEB00390B9E /* SimpleTimer WatchKit Extension */,
 				DB0493EC26089EE600390B9E /* Products */,
+				DB3E1835260D0FA00003EB28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +137,9 @@
 			isa = PBXGroup;
 			children = (
 				DB04940326089EEB00390B9E /* InterfaceController.swift */,
+				DB049495260D06E400390B9E /* TimerDigits.swift */,
+				DB049497260D06E400390B9E /* TimerDisplay.swift */,
+				DB049496260D06E400390B9E /* TimerModel.swift */,
 				DB04940526089EEB00390B9E /* ExtensionDelegate.swift */,
 				DB04940726089EEB00390B9E /* NotificationController.swift */,
 				DB04940926089EEB00390B9E /* ComplicationController.swift */,
@@ -128,6 +148,13 @@
 				DB04940E26089EEC00390B9E /* PushNotificationPayload.apns */,
 			);
 			path = "SimpleTimer WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		DB3E1835260D0FA00003EB28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,12 +182,12 @@
 			buildConfigurationList = DB04941526089EEC00390B9E /* Build configuration list for PBXNativeTarget "SimpleTimer WatchKit App" */;
 			buildPhases = (
 				DB0493ED26089EE700390B9E /* Resources */,
-				DB04941426089EEC00390B9E /* Embed App Extensions */,
+				DB57EDCF260D106800F80186 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DB04940126089EEB00390B9E /* PBXTargetDependency */,
+				DB57EDCE260D106800F80186 /* PBXTargetDependency */,
 			);
 			name = "SimpleTimer WatchKit App";
 			productName = "SimpleTimer WatchKit App";
@@ -174,6 +201,7 @@
 				DB0493FA26089EEB00390B9E /* Sources */,
 				DB0493FB26089EEB00390B9E /* Frameworks */,
 				DB0493FC26089EEB00390B9E /* Resources */,
+				DB3E1839260D0FA00003EB28 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
@@ -258,8 +286,11 @@
 			files = (
 				DB04940826089EEB00390B9E /* NotificationController.swift in Sources */,
 				DB04940A26089EEB00390B9E /* ComplicationController.swift in Sources */,
+				DB049498260D06E400390B9E /* TimerDigits.swift in Sources */,
+				DB049499260D06E400390B9E /* TimerModel.swift in Sources */,
 				DB04940626089EEB00390B9E /* ExtensionDelegate.swift in Sources */,
 				DB04940426089EEB00390B9E /* InterfaceController.swift in Sources */,
+				DB04949A260D06E400390B9E /* TimerDisplay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,10 +302,10 @@
 			target = DB0493EE26089EE700390B9E /* SimpleTimer WatchKit App */;
 			targetProxy = DB0493F126089EE700390B9E /* PBXContainerItemProxy */;
 		};
-		DB04940126089EEB00390B9E /* PBXTargetDependency */ = {
+		DB57EDCE260D106800F80186 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DB0493FD26089EEB00390B9E /* SimpleTimer WatchKit Extension */;
-			targetProxy = DB04940026089EEB00390B9E /* PBXContainerItemProxy */;
+			targetProxy = DB57EDCD260D106800F80186 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -451,7 +482,6 @@
 		DB04941626089EEC00390B9E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -471,7 +501,6 @@
 		DB04941726089EEC00390B9E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;

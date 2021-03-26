@@ -1,47 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14256" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14243"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14219"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SimpleTimer_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <spriteKitScene width="0.5" height="0.5" alignment="center" verticalAlignment="center" id="CSz-lM-J35"/>
+                        <group alignment="center" verticalAlignment="center" layout="vertical" id="ceC-p0-se5">
+                            <items>
+                                <group width="1" height="1" alignment="center" spacing="1" id="GwH-2o-BjV">
+                                    <items>
+                                        <label width="43" alignment="center" verticalAlignment="bottom" text="00:" id="P2A-wb-O2h">
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                        </label>
+                                        <label width="43" alignment="center" verticalAlignment="bottom" text="00:" id="WB0-Ac-1Wj">
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                        </label>
+                                        <label width="55" alignment="center" verticalAlignment="bottom" text="00.00" id="h34-Xd-zNE">
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="center" contentMode="scaleAspectFit" id="tdZ-eY-7aH">
+                                    <items>
+                                        <button width="65" alignment="right" verticalAlignment="center" title="Button" id="uxK-4H-dMp">
+                                            <connections>
+                                                <action selector="startStopTimerButtonAction" destination="AgC-eL-Hgc" id="O3v-0n-MaF"/>
+                                            </connections>
+                                        </button>
+                                        <button width="65" alignment="left" verticalAlignment="center" title="Button" id="RWz-Xt-T9J">
+                                            <connections>
+                                                <action selector="resetTimerButtonAction" destination="AgC-eL-Hgc" id="rJw-uY-2XD"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="hoursLabel" destination="P2A-wb-O2h" id="joo-gl-sd5"/>
+                        <outlet property="minutesLabel" destination="WB0-Ac-1Wj" id="8ev-08-rMr"/>
+                        <outlet property="resetTimerButtonOutlet" destination="RWz-Xt-T9J" id="eWS-q5-Sqj"/>
+                        <outlet property="secondsLabel" destination="h34-Xd-zNE" id="t4I-Pz-VBa"/>
+                        <outlet property="startStopTimerButtonOutlet" destination="uxK-4H-dMp" id="htf-dY-GD2"/>
+                        <outlet property="timerCircleScene" destination="CSz-lM-J35" id="uc2-OD-rJj"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
-        </scene>
-        <!--Static Notification Interface Controller-->
-        <scene sceneID="AEw-b0-oYE">
-            <objects>
-                <notificationController id="YCC-NB-fut">
-                    <items>
-                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
-                    </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
-                    <connections>
-                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
-                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
-                    </connections>
-                </notificationController>
-            </objects>
-            <point key="canvasLocation" x="220" y="643"/>
-        </scene>
-        <!--Notification Controller-->
-        <scene sceneID="ZPc-GJ-vnh">
-            <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="468" y="643"/>
-        </scene>
-        <!--Notification Controller-->
-        <scene sceneID="Niz-AI-uX2">
-            <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="468" y="345"/>
         </scene>
     </scenes>
 </document>
